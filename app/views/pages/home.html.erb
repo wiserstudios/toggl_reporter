@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Name</th>
+      <th>Task</th>
+      <th>Project</th>
+      <th>Client</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_tasks.each do |user_task| %>
+      <tr>
+        <td><%= user_task[:time].nil? ? nil : time_ago_in_words(user_task[:time]) %></td>
+        <td><%= user_task[:name] %></td>
+        <td><%= user_task[:task] %></td>
+        <td><%= user_task[:project] %></td>
+        <td><%= user_task[:client] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<script type="text/javascript">
+  setTimeout(function(){
+    location = ''
+  },60000)
+</script>

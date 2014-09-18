@@ -7,12 +7,9 @@ $ git push heroku master
 $ heroku run rake db:migrate
 ````
 
-Add master user
----
-Whoever owns the toggl account, needs to do this.
-
 Add another user
 ===
+Whoever owns the toggl account for the team, needs to do this with "master: true" instead of "master: false"
 Toggl API tokens can be found here: https://www.toggl.com/app/profile
 
 ````
